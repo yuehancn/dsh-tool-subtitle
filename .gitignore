@@ -1,0 +1,4 @@
+node_modules/
+subtitle-output/
+_test/tmp-out/
+*.log

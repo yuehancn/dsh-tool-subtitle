@@ -1,0 +1,15 @@
+# The dsh-tool-subtitle bundle patch: one insert adding the subtitle tool suite.
+#
+# The ASR engine is configured by overriding this row in the profile's own
+# cordis.patch.yml (the last write wins per row). `asrCommand` is any executable
+# that writes an SRT file, invoked with {input}/{output}/{lang} placeholders —
+# faster-whisper, whisper.cpp, or an internal API client all work.
+#
+#   - id: tool-subtitle
+#     config:
+#       asrCommand: C:/Users/<you>/AppData/Local/Programs/Python/Python311/Scripts/whisper-faster.exe
+#       asrArgs: ["{input}", "--model", "large-v3", "--output_dir", "{dir}", "--output_format", "srt", "--language", "{lang}"]
+
+- insert:
+    - id: tool-subtitle
+      name: dsh-tool-subtitle
